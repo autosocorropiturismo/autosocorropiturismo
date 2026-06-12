@@ -128,12 +128,20 @@ function Index() {
         <section className="hero">
           <div className="hero-overlay" />
           <div className="hero-inner">
-            <div className="badge-24h"><span className="dot" /> Disponível 24 horas, todos os dias</div>
-            <h1>Guincho e Auto Socorro em Itacarambi MG — 24 Horas</h1>
-            <p>Atendimento rápido para Itacarambi, Norte de Minas e visitantes do Parque Nacional Cavernas do Peruaçu. Chame agora — estamos disponíveis 24 horas.</p>
-            <div className="cta-row">
-              <a className="btn btn-whats" href={WHATSAPP} target="_blank" rel="noopener noreferrer">💬 Chamar no WhatsApp</a>
-              <a className="btn btn-dark" href={PHONE}>📞 Ligue Agora</a>
+            <div className="hero-text">
+              <div className="badge-24h"><span className="dot" /> Disponível 24 horas, todos os dias</div>
+              <h1>Guincho e Auto Socorro em Itacarambi MG — 24 Horas</h1>
+              <p>Atendimento rápido para Itacarambi, Norte de Minas e visitantes do Parque Nacional Cavernas do Peruaçu. Chame agora — estamos disponíveis 24 horas.</p>
+              <div className="hero-image hero-image-mobile">
+                <img src={towTruck} alt="Guincho Auto Socorro Pi Turismo" width={1024} height={768} />
+              </div>
+              <div className="cta-row">
+                <a className="btn btn-whats" href={WHATSAPP} target="_blank" rel="noopener noreferrer">💬 Chamar no WhatsApp</a>
+                <a className="btn btn-dark" href={PHONE}>📞 Ligue Agora</a>
+              </div>
+            </div>
+            <div className="hero-image hero-image-desktop">
+              <img src={towTruck} alt="Guincho Auto Socorro Pi Turismo" width={1024} height={768} />
             </div>
           </div>
         </section>
