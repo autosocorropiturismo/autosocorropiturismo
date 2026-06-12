@@ -118,7 +118,7 @@ function Index() {
 
       <header className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
         <a href="#top" className="brand">
-          <span className="brand-mark">PI</span>
+          <img src={logo.url} alt="Auto Socorro Pi Turismo" className="brand-mark" />
           <span className="brand-name">Auto Socorro<br/><b>Pi Turismo</b></span>
         </a>
         <a href={PHONE} className="nav-phone">📞 (38) 99986-5609</a>
