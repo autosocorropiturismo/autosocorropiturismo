@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import towTruck from "@/assets/tow-truck.png";
+import towTruckBg from "@/assets/tow-truck-bg.jpg";
 
 const WHATSAPP = "https://wa.me/5538999865609";
 const PHONE = "tel:+5538999865609";
@@ -319,9 +320,10 @@ a{color:inherit;text-decoration:none}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden;
   background:linear-gradient(135deg,#0a0a0a 0%,#111 60%,#0a1a10 100%);
 }
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(ellipse at 80% 20%,rgba(15,138,58,.25),transparent 50%),
-  radial-gradient(ellipse at 20% 80%,rgba(220,38,38,.18),transparent 50%);
+.hero::before{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(180deg,rgba(10,10,10,.78) 0%,rgba(10,10,10,.65) 50%,rgba(10,10,10,.85) 100%),url("${towTruckBg}");
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  opacity:.95;
 }
 .hero::after{content:"";position:absolute;inset:0;background-image:
   repeating-linear-gradient(90deg,transparent 0 40px,rgba(255,255,255,.03) 40px 41px),
