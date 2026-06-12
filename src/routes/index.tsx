@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import towTruck from "@/assets/tow-truck.png";
 
 const WHATSAPP = "https://wa.me/5538999865609";
 const PHONE = "tel:+5538999865609";
@@ -127,12 +128,20 @@ function Index() {
         <section className="hero">
           <div className="hero-overlay" />
           <div className="hero-inner">
-            <div className="badge-24h"><span className="dot" /> Disponível 24 horas, todos os dias</div>
-            <h1>Guincho e Auto Socorro em Itacarambi MG — 24 Horas</h1>
-            <p>Atendimento rápido para Itacarambi, Norte de Minas e visitantes do Parque Nacional Cavernas do Peruaçu. Chame agora — estamos disponíveis 24 horas.</p>
-            <div className="cta-row">
-              <a className="btn btn-whats" href={WHATSAPP} target="_blank" rel="noopener noreferrer">💬 Chamar no WhatsApp</a>
-              <a className="btn btn-dark" href={PHONE}>📞 Ligue Agora</a>
+            <div className="hero-text">
+              <div className="badge-24h"><span className="dot" /> Disponível 24 horas, todos os dias</div>
+              <h1>Guincho e Auto Socorro em Itacarambi MG — 24 Horas</h1>
+              <p>Atendimento rápido para Itacarambi, Norte de Minas e visitantes do Parque Nacional Cavernas do Peruaçu. Chame agora — estamos disponíveis 24 horas.</p>
+              <div className="hero-image hero-image-mobile">
+                <img src={towTruck} alt="Guincho Auto Socorro Pi Turismo" width={1024} height={768} />
+              </div>
+              <div className="cta-row">
+                <a className="btn btn-whats" href={WHATSAPP} target="_blank" rel="noopener noreferrer">💬 Chamar no WhatsApp</a>
+                <a className="btn btn-dark" href={PHONE}>📞 Ligue Agora</a>
+              </div>
+            </div>
+            <div className="hero-image hero-image-desktop">
+              <img src={towTruck} alt="Guincho Auto Socorro Pi Turismo" width={1024} height={768} />
             </div>
           </div>
         </section>
@@ -319,13 +328,27 @@ a{color:inherit;text-decoration:none}
   linear-gradient(180deg,transparent 60%,rgba(0,0,0,.6) 100%);
   pointer-events:none;
 }
-.hero-inner{position:relative;z-index:2;padding:7rem 1.25rem 4rem;max-width:900px;margin:0 auto;text-align:center}
+.hero-inner{position:relative;z-index:2;padding:7rem 1.25rem 4rem;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;text-align:center}
+.hero-text{display:flex;flex-direction:column;align-items:center}
 .badge-24h{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem;border-radius:999px;background:rgba(15,138,58,.15);border:1px solid rgba(22,179,74,.4);color:#bbf7d0;font-size:.8rem;font-weight:600;margin-bottom:1.5rem}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--green-glow);box-shadow:0 0 12px var(--green-glow);animation:pulse 1.5s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .hero h1{font-size:clamp(1.85rem,5.5vw,3.4rem);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem;text-shadow:0 4px 20px rgba(0,0,0,.6)}
 .hero p{font-size:clamp(1rem,2vw,1.15rem);color:#d1d5db;max-width:680px;margin:0 auto 2rem}
+.hero-image{width:100%;display:flex;justify-content:center;align-items:center}
+.hero-image img{width:100%;max-width:520px;height:auto;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6)) drop-shadow(0 0 30px rgba(15,138,58,.25))}
+.hero-image-mobile{margin:0 auto 2rem;max-width:420px}
+.hero-image-desktop{display:none}
 .cta-row{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center}
+@media(min-width:900px){
+  .hero-inner{grid-template-columns:1.1fr 1fr;text-align:left;gap:3rem}
+  .hero-text{align-items:flex-start}
+  .hero p{margin-left:0}
+  .cta-row{justify-content:flex-start}
+  .hero-image-mobile{display:none}
+  .hero-image-desktop{display:flex}
+  .hero-image-desktop img{max-width:100%}
+}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem 1.6rem;border-radius:14px;font-weight:700;font-size:1rem;transition:.25s transform,.25s box-shadow,.25s filter;border:none;cursor:pointer;letter-spacing:.01em}
