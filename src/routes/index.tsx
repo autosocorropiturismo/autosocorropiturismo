@@ -380,7 +380,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
 
 .aux-card{min-width:200px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem;display:flex;align-items:center;gap:.85rem;font-weight:600;transition:.25s;color:var(--ink)}
 .aux-card:hover{border-color:var(--green);background:rgba(15,138,58,.04);transform:translateY(-2px)}
-.aux-icon{font-size:1.6rem;width:42px;height:42px;border-radius:10px;background:rgba(15,138,58,.08);display:grid;place-items:center}
+.aux-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--green-glow));color:#fff;display:grid;place-items:center;flex-shrink:0}
 
 /* DIFFS */
 .diffs{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
