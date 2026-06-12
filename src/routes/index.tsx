@@ -156,11 +156,17 @@ function Index() {
 
             <div className="grid-services">
               {mainServices.map((s) => (
-                <article className="card-service" key={s.title}>
+                <a
+                  key={s.title}
+                  href={`https://wa.me/5538998656097?text=${encodeURIComponent(s.msg)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-service"
+                >
                   <div className="card-icon"><s.Icon size={26} strokeWidth={2} /></div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
-                </article>
+                </a>
               ))}
             </div>
 
