@@ -2,6 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import towTruckBg from "@/assets/tow-truck-bg.jpg";
 import logo from "@/assets/logo.jpeg.asset.json";
+import avatarCarlos from "@/assets/avatar-carlos.jpg";
+import avatarAna from "@/assets/avatar-ana.jpg";
+import avatarRodrigo from "@/assets/avatar-rodrigo.jpg";
+import avatarFernanda from "@/assets/avatar-fernanda.jpg";
 
 const WHATSAPP = "https://wa.me/5538999865609";
 const PHONE = "tel:+5538999865609";
@@ -84,10 +88,10 @@ const cities = [
 ];
 
 const testimonials = [
-  { name: "Carlos Oliveira", city: "Itacarambi", text: "Pane de madrugada e chegaram rapidinho. Atendimento nota 10!" },
-  { name: "Ana Paula Souza", city: "Januária", text: "Pneu furado perto do Parque das Cavernas e me salvaram! Rápido e preço justo." },
-  { name: "Rodrigo Mendes", city: "Manga", text: "Reboque da camionete na rodovia. Chegaram antes do prometido. Empresa séria!" },
-  { name: "Fernanda Lima", city: "Montes Claros", text: "Bateria descarregada longe de casa. Resolveram tudo no local. Recomendo!" },
+  { name: "Carlos Oliveira", city: "Itacarambi", text: "Pane de madrugada e chegaram rapidinho. Atendimento nota 10!", avatar: avatarCarlos },
+  { name: "Ana Paula Souza", city: "Januária", text: "Pneu furado perto do Parque das Cavernas e me salvaram! Rápido e preço justo.", avatar: avatarAna },
+  { name: "Rodrigo Mendes", city: "Manga", text: "Reboque da camionete na rodovia. Chegaram antes do prometido. Empresa séria!", avatar: avatarRodrigo },
+  { name: "Fernanda Lima", city: "Montes Claros", text: "Bateria descarregada longe de casa. Resolveram tudo no local. Recomendo!", avatar: avatarFernanda },
 ];
 
 const cityWhats = (c: string) =>
@@ -212,7 +216,7 @@ function Index() {
               {testimonials.map((t) => (
                 <article key={t.name} className="testimonial">
                   <div className="t-head">
-                    <div className="avatar">{t.name.split(" ").map(n => n[0]).slice(0,2).join("")}</div>
+                  <img src={t.avatar} alt={t.name} className="avatar" loading="lazy" width={46} height={46} />
                     <div>
                       <b>{t.name}</b>
                       <span className="muted">{t.city}</span>
@@ -394,7 +398,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
 /* TESTIMONIALS */
 .testimonial{min-width:300px;max-width:340px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:1.5rem;display:flex;flex-direction:column;gap:.85rem}
 .t-head{display:flex;align-items:center;gap:.75rem}
-.avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green-glow));color:#fff;display:grid;place-items:center;font-weight:800;font-size:.95rem}
+.avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;display:block}
 .t-head b{display:block;font-size:.95rem;color:var(--ink)}
 .muted{font-size:.8rem;color:var(--muted)}
 .stars{color:#facc15;letter-spacing:2px;font-size:1rem}
