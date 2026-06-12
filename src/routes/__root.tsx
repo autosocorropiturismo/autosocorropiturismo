@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Guincho em Itacarambi MG - 24 horas" },
+      { name: "description", content: "Guincho em Itacarambi MG, próximo ao Parque Nacional Cavernas do Peruaçu, socorremos veiculos de leves a pesados em Itacarambi e região" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Guincho em Itacarambi MG - 24 horas" },
+      { property: "og:description", content: "Guincho em Itacarambi MG, próximo ao Parque Nacional Cavernas do Peruaçu, socorremos veiculos de leves a pesados em Itacarambi e região" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Guincho em Itacarambi MG - 24 horas" },
+      { name: "twitter:description", content: "Guincho em Itacarambi MG, próximo ao Parque Nacional Cavernas do Peruaçu, socorremos veiculos de leves a pesados em Itacarambi e região" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/aMt9D0QpOtYJRO6ySi4jrRNBJfP2/social-images/social-1781233742590-WhatsApp_Image_2026-06-04_at_17.16.32.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/aMt9D0QpOtYJRO6ySi4jrRNBJfP2/social-images/social-1781233742590-WhatsApp_Image_2026-06-04_at_17.16.32.webp" },
     ],
     links: [
       {
