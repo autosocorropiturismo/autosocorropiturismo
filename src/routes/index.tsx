@@ -11,8 +11,8 @@ import avatarAna from "@/assets/avatar-ana.jpg";
 import avatarRodrigo from "@/assets/avatar-rodrigo.jpg";
 import avatarFernanda from "@/assets/avatar-fernanda.jpg";
 
-const WHATSAPP = "https://wa.me/5538999865609";
-const PHONE = "tel:+5538999865609";
+const WHATSAPP = "https://wa.me/5538998656097";
+const PHONE = "tel:+5538998656097";
 const INSTAGRAM = "https://www.instagram.com/piturismo.autosocorro";
 const EMAIL = "guincho@autosocorropiturismo.com.br";
 const ADDRESS = "Rua José Ferreira, 64 - Bairro São José, Itacarambi - MG, CEP 39470-000";
