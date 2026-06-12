@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import towTruck from "@/assets/tow-truck.png";
 
 const WHATSAPP = "https://wa.me/5538999865609";
 const PHONE = "tel:+5538999865609";
