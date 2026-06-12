@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import {
+  Bike, Car, Truck, Package, Container,
+  BatteryCharging, Disc3, Fuel, KeyRound, Wrench, Zap, Tractor,
+} from "lucide-react";
 import towTruckBg from "@/assets/tow-truck-bg.jpg";
 import logo from "@/assets/logo.jpeg.asset.json";
 import avatarCarlos from "@/assets/avatar-carlos.jpg";
@@ -64,21 +68,21 @@ export const Route = createFileRoute("/")({
 });
 
 const mainServices = [
-  { icon: "🏍️", title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos." },
-  { icon: "🚗", title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação." },
-  { icon: "🛻", title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs." },
-  { icon: "🚛", title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada." },
-  { icon: "📦", title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino." },
+  { Icon: Bike, title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos." },
+  { Icon: Car, title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação." },
+  { Icon: Truck, title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs." },
+  { Icon: Container, title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada." },
+  { Icon: Package, title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino." },
 ];
 
 const auxServices = [
-  { icon: "🔋", title: "Recarga de Bateria" },
-  { icon: "🛞", title: "Troca de Pneu" },
-  { icon: "⛽", title: "Entrega de Combustível" },
-  { icon: "🔑", title: "Chaveiro Automotivo" },
-  { icon: "🔧", title: "Socorro Mecânico" },
-  { icon: "⚡", title: "Socorro Elétrico" },
-  { icon: "🚜", title: "Destombamento" },
+  { Icon: BatteryCharging, title: "Recarga de Bateria" },
+  { Icon: Disc3, title: "Troca de Pneu" },
+  { Icon: Fuel, title: "Entrega de Combustível" },
+  { Icon: KeyRound, title: "Chaveiro Automotivo" },
+  { Icon: Wrench, title: "Socorro Mecânico" },
+  { Icon: Zap, title: "Socorro Elétrico" },
+  { Icon: Tractor, title: "Destombamento" },
 ];
 
 const cities = [
@@ -153,7 +157,7 @@ function Index() {
             <div className="grid-services">
               {mainServices.map((s) => (
                 <article className="card-service" key={s.title}>
-                  <div className="card-icon">{s.icon}</div>
+                  <div className="card-icon"><s.Icon size={26} strokeWidth={2} /></div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
                 </article>
@@ -164,7 +168,7 @@ function Index() {
             <Carousel>
               {auxServices.map((s) => (
                 <a key={s.title} href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="aux-card">
-                  <span className="aux-icon">{s.icon}</span>
+                  <span className="aux-icon"><s.Icon size={22} strokeWidth={2} /></span>
                   <span>{s.title}</span>
                 </a>
               ))}
@@ -359,7 +363,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
 .card-service::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-glow));transform:scaleX(0);transform-origin:left;transition:.3s}
 .card-service:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:transparent}
 .card-service:hover::before{transform:scaleX(1)}
-.card-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(15,138,58,.1),rgba(22,179,74,.05));display:grid;place-items:center;font-size:1.6rem;margin-bottom:1rem}
+.card-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--green-glow));display:grid;place-items:center;color:#fff;margin-bottom:1rem;box-shadow:0 8px 20px rgba(15,138,58,.25)}
 .card-service h3{font-size:1.05rem;font-weight:800;margin-bottom:.4rem;color:var(--ink)}
 .card-service p{color:var(--muted);font-size:.9rem}
 
@@ -376,7 +380,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
 
 .aux-card{min-width:200px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.25rem;display:flex;align-items:center;gap:.85rem;font-weight:600;transition:.25s;color:var(--ink)}
 .aux-card:hover{border-color:var(--green);background:rgba(15,138,58,.04);transform:translateY(-2px)}
-.aux-icon{font-size:1.6rem;width:42px;height:42px;border-radius:10px;background:rgba(15,138,58,.08);display:grid;place-items:center}
+.aux-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--green-glow));color:#fff;display:grid;place-items:center;flex-shrink:0}
 
 /* DIFFS */
 .diffs{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem}
