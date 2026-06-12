@@ -363,7 +363,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
 .card-service::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-glow));transform:scaleX(0);transform-origin:left;transition:.3s}
 .card-service:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:transparent}
 .card-service:hover::before{transform:scaleX(1)}
-.card-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(15,138,58,.1),rgba(22,179,74,.05));display:grid;place-items:center;font-size:1.6rem;margin-bottom:1rem}
+.card-icon{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,var(--green),var(--green-glow));display:grid;place-items:center;color:#fff;margin-bottom:1rem;box-shadow:0 8px 20px rgba(15,138,58,.25)}
 .card-service h3{font-size:1.05rem;font-weight:800;margin-bottom:.4rem;color:var(--ink)}
 .card-service p{color:var(--muted);font-size:.9rem}
 
