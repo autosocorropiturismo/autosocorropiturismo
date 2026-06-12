@@ -365,7 +365,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
 .grid-services{display:grid;grid-template-columns:1fr;gap:1rem}
 @media (min-width:640px){.grid-services{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){.grid-services{grid-template-columns:repeat(5,1fr)}}
-.card-service{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1.5rem;transition:.3s;position:relative;overflow:hidden}
+.card-service{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1.5rem;transition:.3s;position:relative;overflow:hidden;display:block}
 .card-service::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-glow));transform:scaleX(0);transform-origin:left;transition:.3s}
 .card-service:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:transparent}
 .card-service:hover::before{transform:scaleX(1)}
