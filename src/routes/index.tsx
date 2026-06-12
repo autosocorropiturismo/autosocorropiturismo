@@ -41,7 +41,7 @@ export const Route = createFileRoute("/")({
           "@type": "LocalBusiness",
           name: "Auto Socorro Pi Turismo",
           image: "",
-          telephone: "+5538999865609",
+          telephone: "+5538998656097",
           email: EMAIL,
           url: "https://autosocorropiturismo.com.br",
           address: {
