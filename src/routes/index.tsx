@@ -303,7 +303,7 @@ a{color:inherit;text-decoration:none}
 .nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.25rem;transition:.3s background,.3s box-shadow;color:#fff}
 .nav-scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(8px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
 .brand{display:flex;align-items:center;gap:.6rem}
-.brand-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--green-glow));display:grid;place-items:center;font-weight:900;color:#fff;font-size:.95rem;box-shadow:0 4px 14px rgba(15,138,58,.5)}
+.brand-mark{width:44px;height:44px;border-radius:10px;object-fit:cover;box-shadow:0 4px 14px rgba(15,138,58,.5)}
 .brand-name{font-size:.78rem;line-height:1.1}
 .brand-name b{font-size:.95rem}
 .nav-phone{font-weight:600;font-size:.9rem;padding:.55rem .9rem;border-radius:999px;background:var(--red);color:#fff;box-shadow:0 4px 14px rgba(220,38,38,.45)}
