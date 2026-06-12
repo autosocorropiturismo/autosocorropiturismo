@@ -68,11 +68,11 @@ export const Route = createFileRoute("/")({
 });
 
 const mainServices = [
-  { Icon: Bike, title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos." },
-  { Icon: Car, title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação." },
-  { Icon: Truck, title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs." },
-  { Icon: Container, title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada." },
-  { Icon: Package, title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino." },
+  { Icon: Bike, title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos.", msg: "Olá! Preciso de reboque para moto." },
+  { Icon: Car, title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação.", msg: "Olá! Preciso de reboque para carro." },
+  { Icon: Truck, title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs.", msg: "Olá! Preciso de reboque para camionete/SUV." },
+  { Icon: Container, title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada.", msg: "Olá! Preciso de reboque para veículo pesado." },
+  { Icon: Package, title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino.", msg: "Olá! Preciso de transporte de materiais." },
 ];
 
 const auxServices = [
