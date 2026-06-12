@@ -68,11 +68,11 @@ export const Route = createFileRoute("/")({
 });
 
 const mainServices = [
-  { Icon: Bike, title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos." },
-  { Icon: Car, title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação." },
-  { Icon: Truck, title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs." },
-  { Icon: Container, title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada." },
-  { Icon: Package, title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino." },
+  { Icon: Bike, title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos.", msg: "Olá! Preciso de reboque para moto." },
+  { Icon: Car, title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação.", msg: "Olá! Preciso de reboque para carro." },
+  { Icon: Truck, title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs.", msg: "Olá! Preciso de reboque para camionete/SUV." },
+  { Icon: Container, title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada.", msg: "Olá! Preciso de reboque para veículo pesado." },
+  { Icon: Package, title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino.", msg: "Olá! Preciso de transporte de materiais." },
 ];
 
 const auxServices = [
@@ -156,11 +156,17 @@ function Index() {
 
             <div className="grid-services">
               {mainServices.map((s) => (
-                <article className="card-service" key={s.title}>
+                <a
+                  key={s.title}
+                  href={`https://wa.me/5538998656097?text=${encodeURIComponent(s.msg)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-service"
+                >
                   <div className="card-icon"><s.Icon size={26} strokeWidth={2} /></div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
-                </article>
+                </a>
               ))}
             </div>
 
@@ -359,7 +365,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
 .grid-services{display:grid;grid-template-columns:1fr;gap:1rem}
 @media (min-width:640px){.grid-services{grid-template-columns:repeat(2,1fr)}}
 @media (min-width:1024px){.grid-services{grid-template-columns:repeat(5,1fr)}}
-.card-service{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1.5rem;transition:.3s;position:relative;overflow:hidden}
+.card-service{background:#fff;border:1px solid var(--border);border-radius:18px;padding:1.5rem;transition:.3s;position:relative;overflow:hidden;display:block}
 .card-service::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--green-glow));transform:scaleX(0);transform-origin:left;transition:.3s}
 .card-service:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.08);border-color:transparent}
 .card-service:hover::before{transform:scaleX(1)}
