@@ -168,7 +168,7 @@ function Index() {
             <Carousel>
               {auxServices.map((s) => (
                 <a key={s.title} href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="aux-card">
-                  <span className="aux-icon">{s.icon}</span>
+                  <span className="aux-icon"><s.Icon size={22} strokeWidth={2} /></span>
                   <span>{s.title}</span>
                 </a>
               ))}
