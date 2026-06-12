@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import {
+  Bike, Car, Truck, Package, Container,
+  BatteryCharging, Disc3, Fuel, KeyRound, Wrench, Zap, Tractor,
+} from "lucide-react";
 import towTruckBg from "@/assets/tow-truck-bg.jpg";
 import logo from "@/assets/logo.jpeg.asset.json";
 import avatarCarlos from "@/assets/avatar-carlos.jpg";
