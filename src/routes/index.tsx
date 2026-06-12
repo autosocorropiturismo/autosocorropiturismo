@@ -68,21 +68,21 @@ export const Route = createFileRoute("/")({
 });
 
 const mainServices = [
-  { icon: "🏍️", title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos." },
-  { icon: "🚗", title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação." },
-  { icon: "🛻", title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs." },
-  { icon: "🚛", title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada." },
-  { icon: "📦", title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino." },
+  { Icon: Bike, title: "Reboque de Moto", desc: "Transporte seguro para motos de todos os modelos." },
+  { Icon: Car, title: "Reboque de Carro", desc: "Guincho ágil para veículos de passeio em qualquer situação." },
+  { Icon: Truck, title: "Reboque de Camionete", desc: "Plataforma reforçada para camionetes e SUVs." },
+  { Icon: Container, title: "Reboque de Veículo Pesado", desc: "Estrutura preparada para caminhões e carga pesada." },
+  { Icon: Package, title: "Transporte de Materiais", desc: "Levamos materiais e cargas com segurança até o destino." },
 ];
 
 const auxServices = [
-  { icon: "🔋", title: "Recarga de Bateria" },
-  { icon: "🛞", title: "Troca de Pneu" },
-  { icon: "⛽", title: "Entrega de Combustível" },
-  { icon: "🔑", title: "Chaveiro Automotivo" },
-  { icon: "🔧", title: "Socorro Mecânico" },
-  { icon: "⚡", title: "Socorro Elétrico" },
-  { icon: "🚜", title: "Destombamento" },
+  { Icon: BatteryCharging, title: "Recarga de Bateria" },
+  { Icon: Disc3, title: "Troca de Pneu" },
+  { Icon: Fuel, title: "Entrega de Combustível" },
+  { Icon: KeyRound, title: "Chaveiro Automotivo" },
+  { Icon: Wrench, title: "Socorro Mecânico" },
+  { Icon: Zap, title: "Socorro Elétrico" },
+  { Icon: Tractor, title: "Destombamento" },
 ];
 
 const cities = [
