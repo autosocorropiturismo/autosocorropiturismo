@@ -157,7 +157,7 @@ function Index() {
             <div className="grid-services">
               {mainServices.map((s) => (
                 <article className="card-service" key={s.title}>
-                  <div className="card-icon">{s.icon}</div>
+                  <div className="card-icon"><s.Icon size={26} strokeWidth={2} /></div>
                   <h3>{s.title}</h3>
                   <p>{s.desc}</p>
                 </article>
