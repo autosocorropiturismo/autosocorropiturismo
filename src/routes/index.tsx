@@ -2,6 +2,10 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import towTruckBg from "@/assets/tow-truck-bg.jpg";
 import logo from "@/assets/logo.jpeg.asset.json";
+import avatarCarlos from "@/assets/avatar-carlos.jpg";
+import avatarAna from "@/assets/avatar-ana.jpg";
+import avatarRodrigo from "@/assets/avatar-rodrigo.jpg";
+import avatarFernanda from "@/assets/avatar-fernanda.jpg";
 
 const WHATSAPP = "https://wa.me/5538999865609";
 const PHONE = "tel:+5538999865609";
