@@ -88,10 +88,10 @@ const cities = [
 ];
 
 const testimonials = [
-  { name: "Carlos Oliveira", city: "Itacarambi", text: "Pane de madrugada e chegaram rapidinho. Atendimento nota 10!" },
-  { name: "Ana Paula Souza", city: "Januária", text: "Pneu furado perto do Parque das Cavernas e me salvaram! Rápido e preço justo." },
-  { name: "Rodrigo Mendes", city: "Manga", text: "Reboque da camionete na rodovia. Chegaram antes do prometido. Empresa séria!" },
-  { name: "Fernanda Lima", city: "Montes Claros", text: "Bateria descarregada longe de casa. Resolveram tudo no local. Recomendo!" },
+  { name: "Carlos Oliveira", city: "Itacarambi", text: "Pane de madrugada e chegaram rapidinho. Atendimento nota 10!", avatar: avatarCarlos },
+  { name: "Ana Paula Souza", city: "Januária", text: "Pneu furado perto do Parque das Cavernas e me salvaram! Rápido e preço justo.", avatar: avatarAna },
+  { name: "Rodrigo Mendes", city: "Manga", text: "Reboque da camionete na rodovia. Chegaram antes do prometido. Empresa séria!", avatar: avatarRodrigo },
+  { name: "Fernanda Lima", city: "Montes Claros", text: "Bateria descarregada longe de casa. Resolveram tudo no local. Recomendo!", avatar: avatarFernanda },
 ];
 
 const cityWhats = (c: string) =>
