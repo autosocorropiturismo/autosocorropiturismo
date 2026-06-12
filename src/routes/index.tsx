@@ -99,7 +99,7 @@ const testimonials = [
 ];
 
 const cityWhats = (c: string) =>
-  `https://wa.me/5538999865609?text=${encodeURIComponent(`Olá! Preciso de guincho em ${c}.`)}`;
+  `https://wa.me/5538998656097?text=${encodeURIComponent(`Olá! Preciso de guincho em ${c}.`)}`;
 
 function Carousel({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
