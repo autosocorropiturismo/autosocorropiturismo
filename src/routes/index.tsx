@@ -306,13 +306,13 @@ function Index() {
             <p className="lead">Nossa frota em ação no Norte de Minas — de motos a veículos pesados, dia e noite.</p>
             <div className="gallery">
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
-                <img src={guincho1} alt="Guincho da Auto Socorro Pi Turismo transportando carro em estrada de Itacarambi MG" loading="lazy" width={1024} height={1024} />
+                <img src={guincho1.url} alt="Guincho da Auto Socorro Pi Turismo transportando carro em estrada de Itacarambi MG" loading="lazy" width={1024} height={1024} />
               </a>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
-                <img src={guincho2} alt="Caminhão guincho pesado da Pi Turismo rebocando camionete no Norte de Minas" loading="lazy" width={1024} height={1024} />
+                <img src={guincho2.url} alt="Caminhão guincho pesado da Pi Turismo rebocando camionete no Norte de Minas" loading="lazy" width={1024} height={1024} />
               </a>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
-                <img src={guincho3} alt="Guincho 24 horas atendendo moto na estrada à noite — Auto Socorro Pi Turismo" loading="lazy" width={1024} height={1024} />
+                <img src={guincho3.url} alt="Guincho 24 horas atendendo moto na estrada à noite — Auto Socorro Pi Turismo" loading="lazy" width={1024} height={1024} />
               </a>
             </div>
           </div>
