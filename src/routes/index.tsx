@@ -10,6 +10,17 @@ import avatarCarlos from "@/assets/avatar-carlos.jpg";
 import avatarAna from "@/assets/avatar-ana.jpg";
 import avatarRodrigo from "@/assets/avatar-rodrigo.jpg";
 import avatarFernanda from "@/assets/avatar-fernanda.jpg";
+import guincho1 from "@/assets/guincho-1.jpg";
+import guincho2 from "@/assets/guincho-2.jpg";
+import guincho3 from "@/assets/guincho-3.jpg";
+
+const faqs = [
+  { q: "Vocês atendem 24 horas em Itacarambi MG?", a: "Sim. A Auto Socorro Pi Turismo atende 24 horas por dia, 7 dias por semana, em Itacarambi e em toda a região do Norte de Minas Gerais." },
+  { q: "Quanto custa um guincho em Itacarambi?", a: "O valor varia conforme a distância, o tipo de veículo e a complexidade do serviço. Chame no WhatsApp (38) 99865-6097 para um orçamento rápido e sem compromisso." },
+  { q: "Vocês fazem reboque para o Parque Nacional Cavernas do Peruaçu?", a: "Sim. Atendemos turistas e moradores em toda a região do Parque Nacional Cavernas do Peruaçu, Januária, Manga, São João das Missões e Fabião." },
+  { q: "Que tipos de veículos vocês rebocam?", a: "Rebocamos motos, carros de passeio, camionetes, SUVs e veículos pesados como caminhões. Também fazemos transporte de materiais." },
+  { q: "Como solicitar o guincho rapidamente?", a: "O jeito mais rápido é pelo WhatsApp em https://wa.me/5538998656097 ou ligando para (38) 99865-6097. Atendemos na hora." },
+];
 
 const WHATSAPP = "https://wa.me/5538998656097";
 const PHONE = "tel:+5538998656097";
@@ -25,25 +36,41 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "guincho itacarambi, auto socorro itacarambi, reboque norte de minas, guincho 24 horas, pane seca, cavernas do peruaçu" },
+      { name: "keywords", content: "guincho itacarambi, auto socorro itacarambi, reboque norte de minas, guincho 24 horas, pane seca, cavernas do peruaçu, guincho januária, guincho manga mg, reboque caminhão norte de minas" },
+      { name: "author", content: "Auto Socorro Pi Turismo" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "geo.region", content: "BR-MG" },
+      { name: "geo.placename", content: "Itacarambi, Minas Gerais" },
+      { name: "geo.position", content: "-15.0936;-44.0958" },
+      { name: "ICBM", content: "-15.0936, -44.0958" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:site_name", content: "Auto Socorro Pi Turismo" },
+      { property: "og:url", content: "https://autosocorropiturismo.lovable.app/" },
+      { property: "og:image", content: "https://autosocorropiturismo.lovable.app/og-cover.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESC },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://autosocorropiturismo.lovable.app/" }],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": ["LocalBusiness", "AutomotiveBusiness", "EmergencyService"],
+          "@id": "https://autosocorropiturismo.lovable.app/#business",
           name: "Auto Socorro Pi Turismo",
-          image: "",
+          alternateName: "Guincho Pi Turismo Itacarambi",
+          description: DESC,
+          image: [
+            "https://autosocorropiturismo.lovable.app/og-cover.jpg",
+          ],
           telephone: "+5538998656097",
           email: EMAIL,
-          url: "https://autosocorropiturismo.com.br",
+          url: "https://autosocorropiturismo.lovable.app/",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Rua José Ferreira, 64 - Bairro São José",
@@ -52,14 +79,45 @@ export const Route = createFileRoute("/")({
             postalCode: "39470-000",
             addressCountry: "BR",
           },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: -15.0936,
+            longitude: -44.0958,
+          },
           openingHoursSpecification: {
             "@type": "OpeningHoursSpecification",
             dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
             opens: "00:00",
             closes: "23:59",
           },
-          areaServed: "Norte de Minas Gerais",
+          areaServed: [
+            { "@type": "City", name: "Itacarambi" },
+            { "@type": "City", name: "Januária" },
+            { "@type": "City", name: "Manga" },
+            { "@type": "City", name: "São Francisco" },
+            { "@type": "City", name: "Montes Claros" },
+            { "@type": "AdministrativeArea", name: "Norte de Minas Gerais" },
+          ],
+          serviceType: [
+            "Reboque de Moto", "Reboque de Carro", "Reboque de Camionete",
+            "Reboque de Veículo Pesado", "Transporte de Materiais",
+            "Recarga de Bateria", "Troca de Pneu", "Entrega de Combustível",
+            "Chaveiro Automotivo", "Socorro Mecânico", "Socorro Elétrico", "Destombamento",
+          ],
           priceRange: "$$",
+          sameAs: [INSTAGRAM],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
         }),
       },
     ],
@@ -240,6 +298,26 @@ function Index() {
           </div>
         </section>
 
+        {/* GALERIA */}
+        <section className="section">
+          <div className="container">
+            <span className="eyebrow">Galeria</span>
+            <h2>Fotos do Guincho da Auto Socorro Pi Turismo</h2>
+            <p className="lead">Nossa frota em ação no Norte de Minas — de motos a veículos pesados, dia e noite.</p>
+            <div className="gallery">
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
+                <img src={guincho1} alt="Guincho da Auto Socorro Pi Turismo transportando carro em estrada de Itacarambi MG" loading="lazy" width={1024} height={1024} />
+              </a>
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
+                <img src={guincho2} alt="Caminhão guincho pesado da Pi Turismo rebocando camionete no Norte de Minas" loading="lazy" width={1024} height={1024} />
+              </a>
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
+                <img src={guincho3} alt="Guincho 24 horas atendendo moto na estrada à noite — Auto Socorro Pi Turismo" loading="lazy" width={1024} height={1024} />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* CONTATO */}
         <section className="section section-alt">
           <div className="container">
@@ -263,6 +341,22 @@ function Index() {
                 <a className="cbtn cbtn-mail" href={`mailto:${EMAIL}`}>📧 E-mail</a>
                 <a className="cbtn cbtn-phone" href={PHONE}>📞 Telefone</a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section">
+          <div className="container">
+            <span className="eyebrow">Perguntas Frequentes</span>
+            <h2>Dúvidas sobre o nosso guincho 24h</h2>
+            <div className="faq">
+              {faqs.map((f) => (
+                <details key={f.q} className="faq-item">
+                  <summary>{f.q}</summary>
+                  <p>{f.a}</p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
@@ -456,4 +550,21 @@ h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;letter-spacing:-.02em;li
   .cta-row{flex-direction:column}
   .nav-phone{font-size:.78rem;padding:.45rem .7rem}
 }
+
+/* GALERIA */
+.gallery{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:768px){.gallery{grid-template-columns:repeat(3,1fr)}}
+.gallery-item{display:block;overflow:hidden;border-radius:16px;border:1px solid var(--border);background:#000;box-shadow:0 8px 24px rgba(0,0,0,.08);transition:.3s}
+.gallery-item img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:.5s transform}
+.gallery-item:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.18)}
+.gallery-item:hover img{transform:scale(1.06)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:.75rem;max-width:820px}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;transition:.25s}
+.faq-item[open]{border-color:var(--green);box-shadow:0 6px 20px rgba(15,138,58,.1)}
+.faq-item summary{cursor:pointer;font-weight:700;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq-item summary::after{content:"+";font-size:1.4rem;color:var(--green);font-weight:400;transition:.25s}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{margin-top:.75rem;color:var(--muted);line-height:1.6}
 `;
