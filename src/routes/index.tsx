@@ -345,6 +345,22 @@ function Index() {
           </div>
         </section>
 
+        {/* FAQ */}
+        <section className="section">
+          <div className="container">
+            <span className="eyebrow">Perguntas Frequentes</span>
+            <h2>Dúvidas sobre o nosso guincho 24h</h2>
+            <div className="faq">
+              {faqs.map((f) => (
+                <details key={f.q} className="faq-item">
+                  <summary>{f.q}</summary>
+                  <p>{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA FINAL */}
         <section className="cta-final">
           <div className="container">
