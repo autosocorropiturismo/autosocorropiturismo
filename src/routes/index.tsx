@@ -10,6 +10,17 @@ import avatarCarlos from "@/assets/avatar-carlos.jpg";
 import avatarAna from "@/assets/avatar-ana.jpg";
 import avatarRodrigo from "@/assets/avatar-rodrigo.jpg";
 import avatarFernanda from "@/assets/avatar-fernanda.jpg";
+import guincho1 from "@/assets/guincho-1.jpg";
+import guincho2 from "@/assets/guincho-2.jpg";
+import guincho3 from "@/assets/guincho-3.jpg";
+
+const faqs = [
+  { q: "Vocês atendem 24 horas em Itacarambi MG?", a: "Sim. A Auto Socorro Pi Turismo atende 24 horas por dia, 7 dias por semana, em Itacarambi e em toda a região do Norte de Minas Gerais." },
+  { q: "Quanto custa um guincho em Itacarambi?", a: "O valor varia conforme a distância, o tipo de veículo e a complexidade do serviço. Chame no WhatsApp (38) 99865-6097 para um orçamento rápido e sem compromisso." },
+  { q: "Vocês fazem reboque para o Parque Nacional Cavernas do Peruaçu?", a: "Sim. Atendemos turistas e moradores em toda a região do Parque Nacional Cavernas do Peruaçu, Januária, Manga, São João das Missões e Fabião." },
+  { q: "Que tipos de veículos vocês rebocam?", a: "Rebocamos motos, carros de passeio, camionetes, SUVs e veículos pesados como caminhões. Também fazemos transporte de materiais." },
+  { q: "Como solicitar o guincho rapidamente?", a: "O jeito mais rápido é pelo WhatsApp em https://wa.me/5538998656097 ou ligando para (38) 99865-6097. Atendemos na hora." },
+];
 
 const WHATSAPP = "https://wa.me/5538998656097";
 const PHONE = "tel:+5538998656097";
