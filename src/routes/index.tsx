@@ -302,7 +302,7 @@ function Index() {
         <section className="section">
           <div className="container">
             <span className="eyebrow">Galeria</span>
-            <h2>Fotos do Guincho da Auto Socorro Pi Turismo</h2>
+            <h2>Fotos de nosso Guincho&nbsp;</h2>
             <p className="lead">Nossa frota em ação no Norte de Minas — de motos a veículos pesados, dia e noite.</p>
             <div className="gallery">
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
