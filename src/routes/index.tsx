@@ -10,9 +10,9 @@ import avatarCarlos from "@/assets/avatar-carlos.jpg";
 import avatarAna from "@/assets/avatar-ana.jpg";
 import avatarRodrigo from "@/assets/avatar-rodrigo.jpg";
 import avatarFernanda from "@/assets/avatar-fernanda.jpg";
-import guincho1 from "@/assets/guincho-1.jpg";
-import guincho2 from "@/assets/guincho-2.jpg";
-import guincho3 from "@/assets/guincho-3.jpg";
+import guincho1 from "@/assets/guincho-real-1.jpeg.asset.json";
+import guincho2 from "@/assets/guincho-real-2.jpeg.asset.json";
+import guincho3 from "@/assets/guincho-real-3.jpeg.asset.json";
 
 const faqs = [
   { q: "Vocês atendem 24 horas em Itacarambi MG?", a: "Sim. A Auto Socorro Pi Turismo atende 24 horas por dia, 7 dias por semana, em Itacarambi e em toda a região do Norte de Minas Gerais." },
@@ -306,13 +306,13 @@ function Index() {
             <p className="lead">Nossa frota em ação no Norte de Minas — de motos a veículos pesados, dia e noite.</p>
             <div className="gallery">
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
-                <img src={guincho1} alt="Guincho da Auto Socorro Pi Turismo transportando carro em estrada de Itacarambi MG" loading="lazy" width={1024} height={1024} />
+                <img src={guincho1.url} alt="Guincho da Auto Socorro Pi Turismo transportando carro em estrada de Itacarambi MG" loading="lazy" width={1024} height={1024} />
               </a>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
-                <img src={guincho2} alt="Caminhão guincho pesado da Pi Turismo rebocando camionete no Norte de Minas" loading="lazy" width={1024} height={1024} />
+                <img src={guincho2.url} alt="Caminhão guincho pesado da Pi Turismo rebocando camionete no Norte de Minas" loading="lazy" width={1024} height={1024} />
               </a>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="gallery-item">
-                <img src={guincho3} alt="Guincho 24 horas atendendo moto na estrada à noite — Auto Socorro Pi Turismo" loading="lazy" width={1024} height={1024} />
+                <img src={guincho3.url} alt="Guincho 24 horas atendendo moto na estrada à noite — Auto Socorro Pi Turismo" loading="lazy" width={1024} height={1024} />
               </a>
             </div>
           </div>
